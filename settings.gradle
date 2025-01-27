@@ -1,0 +1,27 @@
+pluginManagement {
+    repositories {
+        // Nexus repository for dependencies
+        maven {
+            url = uri("")  // Replace with your Nexus URL
+            credentials {
+                username = System.getProperty("nexusUsername")
+                password = System.getProperty("nexusPassword")
+            }
+        }
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+    repositories {
+        // Nexus repository for dependencies
+        maven {
+            url = uri("")  // Replace with your Nexus URL
+            credentials {
+                username = System.getProperty("nexusUsername")
+                password = System.getProperty("nexusPassword")
+            }
+        }
+    }
+}
+rootProject.name = "Lottie App"
+include ':app'
